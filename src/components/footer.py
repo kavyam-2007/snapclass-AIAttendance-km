@@ -8,3 +8,11 @@ def footer_home():
     </div>
 
   """,unsafe_allow_html=True)
+
+def footer_dashboard():
+  st.markdown("""
+    <div style='margin-top: 2rem; color:black;text-align:center;'>
+      <p>Created with ❤️ by Kavya.</p>
+    </div>
+
+  """,unsafe_allow_html=True)
