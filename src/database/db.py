@@ -1,4 +1,4 @@
-from src.database.congif import supabase
+from src.database.config import supabase
 import bcrypt
 
 def hash_pass(pwd):
@@ -24,4 +24,8 @@ def teacher_login(username,password):
     if check_pass(password,teacher["password"]):
       return teacher
   return None
-  
+
+
+def get_all_students():
+  response = supabase.table("students").select("*").execute()
+  return response.data
