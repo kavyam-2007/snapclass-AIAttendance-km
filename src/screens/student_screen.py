@@ -10,9 +10,11 @@ def student_screen():
   style_background_dashboard()
   col1,col2 = st.columns(2,vertical_alignment='center')
   with col1:
-    header_dashboard();
+    header_dashboard()
   with col2:
-    st.button('Go back to Home',shortcut='control+backspace')
+    if st.button('Go back to Home',shortcut='control+backspace',key='loginbackbtn'):
+      st.session_state['login_type']=None
+      st.rerun()
 
   st.header('Login with FaceID')
   st.space()
