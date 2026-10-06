@@ -13,7 +13,7 @@ def load_dlib_models():
   sp = dlib.shape_predictor(
     face_recognition_models.pose_predictor_model_location()
   )
-  facerec = dlib.face_recoginition_model_v1(
+  facerec = dlib.face_recognition_model_v1(
     face_recognition_models.face_recognition_model_location()
   )
   return detector,sp,facerec
